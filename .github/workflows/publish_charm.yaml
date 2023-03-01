@@ -23,6 +23,8 @@ jobs:
   get-runner-image:
     name: Get runner image
     uses: ./.github/workflows/get_runner_image.yaml
+    with:
+      working-directory: ${{ inputs.working-directory }}
   publish-images:
     name: Publish images to charmhub
     runs-on: ${{ needs.get-runner-image.outputs.runs-on }}
