@@ -1,5 +1,8 @@
 # Copyright 2023 Canonical Ltd.
 # See LICENSE file for licensing details.
+
+"""Integration tests."""
+
 import asyncio
 
 from pytest_operator.plugin import OpsTest
@@ -11,6 +14,7 @@ async def test_build_and_deploy(ops_test: OpsTest, pytestconfig):
     Assert on the unit status before any relations/configurations take place.
     """
     app_name = "test"
+    assert ops_test.model
     charm = await ops_test.build_charm(".")
     resources = {"test-image": pytestconfig.getoption("--test-image")}
 

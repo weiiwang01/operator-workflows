@@ -12,6 +12,11 @@ class TestUploadCharm(CharmBase):
     """Charm the service."""
 
     def __init__(self, *args):
+        """Initialize the charm.
+
+        Args:
+            args: charm initialization arguments.
+        """
         super().__init__(*args)
         self.unit.status = ActiveStatus()
 
