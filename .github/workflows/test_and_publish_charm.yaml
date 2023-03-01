@@ -76,7 +76,7 @@ jobs:
     uses: ./.github/workflows/test.yaml
     secrets: inherit
     with:
-      workflow-directory: ${{ inputs.workflow-directory }}
+      working-directory: ${{ inputs.working-directory }}
   integration-tests:
     name: Run integration tests
     uses: ./.github/workflows/integration_test.yaml
@@ -92,7 +92,7 @@ jobs:
       trivy-fs-enabled: ${{ inputs.trivy-fs-enabled }}
       trivy-fs-ref: ${{ inputs.trivy-fs-ref }}
       trivy-image-config: ${{ inputs.trivy-image-config }}
-      workflow-directory: ${{ inputs.workflow-directory }}
+      working-directory: ${{ inputs.working-directory }}
     secrets: inherit
   release-charm-libs:
     name: Release charm libs
@@ -127,5 +127,5 @@ jobs:
     with:
       channel: ${{ needs.select-channel.outputs.channel }}
       images: ${{ needs.integration-tests.outputs.images }}
-      workflow-directory: ${{ inputs.workflow-directory }}
+      working-directory: ${{ inputs.working-directory }}
     secrets: inherit
