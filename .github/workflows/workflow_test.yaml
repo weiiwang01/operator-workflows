@@ -38,7 +38,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     if: always()
-    needs:''
+    needs:
       - simple
       - pflake8
       - metadata_yaml
