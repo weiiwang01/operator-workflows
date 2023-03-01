@@ -1,7 +1,7 @@
 # Copyright 2023 Canonical Ltd.
 # See LICENSE file for licensing details.
 
-"""Dummy charm for tesing charm upload."""
+"""A charm for tesing charm upload."""
 
 from ops.charm import CharmBase
 from ops.main import main
