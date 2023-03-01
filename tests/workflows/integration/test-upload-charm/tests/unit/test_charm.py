@@ -5,5 +5,5 @@ import unittest
 
 
 class TestCharm(unittest.TestCase):
-    def test():
+    def test(self):
         pass
