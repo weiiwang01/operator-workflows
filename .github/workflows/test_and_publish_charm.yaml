@@ -100,7 +100,7 @@ jobs:
     needs: [ lib-check, tests, integration-tests ]
     steps:
       - uses: actions/checkout@v3
-      - if: inputs.working-directory != "./"
+      - if: inputs.working-directory != './'
         run: |
           TEMP_DIR=$(mktemp -d)
           cp -rp ${{inputs.working-directory}}/. $TEMP_DIR
