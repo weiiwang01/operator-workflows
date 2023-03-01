@@ -6,6 +6,12 @@ summary: A simple charm for testing charm uploads.
 
 description: A simple charm for testing charm uploads.
 
+docs: ""
+
+maintainers: ""
+
+issues: ""
+
 charmhub:
   api-url: https://api.staging.charmhub.io
   storage-url: https://storage.staging.snapcraftcontent.com
