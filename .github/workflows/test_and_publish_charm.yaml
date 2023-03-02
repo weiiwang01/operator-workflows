@@ -104,7 +104,7 @@ jobs:
         run: |
           TEMP_DIR=$(mktemp -d)
           cp -rp ${{inputs.working-directory}}/. $TEMP_DIR
-          rm -rf .* *
+          rm -rf .* * || :
           cp -rp $TEMP_DIR/. .
           rm -rf $TEMP_DIR
       - uses: canonical/charming-actions/release-libraries@2.2.2
