@@ -25,6 +25,10 @@ jobs:
         output-file: README.md
         output-method: inject
 
+    # terraform-docs/gh-actions changes the permissions of repository files
+    - name: Change file ownership
+      run: sudo chown $USER -R .
+
     - name: Create pull request
       uses: canonical/create-pull-request@main
       if: ${{ github.event_name != 'pull_request' }}
