@@ -34,3 +34,6 @@ jobs:
         branch-name: terraform-docs
         title: "chore(docs): Update Terraform documentation"
         body: "Update Terraform documentation in `${{ inputs.terraform-directory }}`."
+        upsert: true
+        ignore-no-changes: true
+        auto-merge: true
